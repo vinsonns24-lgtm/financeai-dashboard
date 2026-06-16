@@ -51,7 +51,7 @@ export function useUpdateTransaction() {
   return useMutation({
     mutationFn: ({ id, ...payload }: { id: string } & Partial<Transaction>) => 
       transactionsApi.update(id, payload),
-    onSuccess: (data, variables) => {
+    onSuccess: (_data, variables) => {
       queryClient.invalidateQueries({ queryKey: transactionKeys.lists() });
       queryClient.invalidateQueries({ queryKey: transactionKeys.recents() });
       queryClient.invalidateQueries({ queryKey: transactionKeys.detail(variables.id) });

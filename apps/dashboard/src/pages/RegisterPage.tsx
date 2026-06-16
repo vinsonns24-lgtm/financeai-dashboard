@@ -26,7 +26,7 @@ export function RegisterPage() {
     setIsLoading(true);
     
     try {
-      const { data, error } = await signUp.email({
+      const { error } = await signUp.email({
         email,
         password,
         name: fullName,
