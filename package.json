@@ -1,0 +1,13 @@
+{
+  "name": "financeai-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/dashboard",
+    "dev:server": "npm run dev --workspace=apps/server",
+    "build": "npm run build --workspace=apps/dashboard"
+  }
+}
