@@ -106,7 +106,7 @@ export function TransactionList({ filters }: TransactionListProps) {
         {data?.data?.map((tx) => {
           const style = getTypeStyling(tx);
           const formattedDate = formatDate(tx.transactionDate);
-          const _categoryName = tx.categoryId ? "Category" : "Uncategorized"; // TODO: populate from categories
+          // TODO: populate from categories
           
           return (
             <div
